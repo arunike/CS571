@@ -119,22 +119,18 @@ Here, you will complete the *first half* of the 6-step design thinking process: 
 Pretend that you are a customer of Badger Bakery. What are your thoughts about the Badger Bakery website? What does it do well, and what needs improvement? What is clear, and what is not so clear? Write down 8-12 thoughts or feelings on seperate post-it notes (or use a digital alternative, like [draw.io](https://app.diagrams.net/) or [Miro](https://miro.com/)). **There are no right or wrong answers here.** Include a picture or screenshot of your post-it notes below.
 
 **>Insert a picture or screenshot of your thoughts here.<**
-![Empathize](figures/empathize.png)
 
 ### 2. Define
 
 Now that we have gathered some thoughts, we must make sense of them! Use affinity diagramming to categorize your thoughts.  Refine your groupings iteratively until you have 2-4 categories. Include a picture or screenshot of your affinity diagram below.
 
 **>Insert your affinity diagram here.<**
-![Define](figures/define.png)
 
 ### 3. Ideate
 
 Think big. Gaining inspiration from your affinity diagram, what could be changed about the Badger Bakery website? Remember to be creative and outrageous. These ideas don't have to be complete thoughts or sentences, go for quantity over quality (aim for 6-8 ideas). Include one *annotated* sketch of what Badger Bakery could look like.
 
 **>Insert your list of ideas and an annotated sketch here.<**
-![Ideate](figures/ideate.png)
-![Sketch](figures/ideate-annotated-sketch.png)
 
 
 ### Done!

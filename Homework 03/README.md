@@ -86,20 +86,16 @@ Here, you will apply your knowledge of visual design to Badger Bakery. If a resp
 INSERT YOUR RESPONSE AND SCREENSHOTS HERE.
 Use of Hierarchy:
 I adjusted the font sizes and weights to create a clear visual hierarchy. The font size for the baked goods' names is larger than the font size for item description. The font weight for the baked goods' names is bolder than the font weight for the featured item description.
-![Different font size and weights for different items](_figures/useOfHierarchy.png)
 
 Consistency:
 I standardized the font sizes and weights across the page. The font size for regular baked goods is the same as the font size for the featured item. The padding between the baked goods' names and the featured item description is the same as the padding between the featured item description and the buttons.
-![Same font size and weight](_figures/consistency.png)
 
 Use of Color:
 I used colors palette to make the baked goods' names and featured item description stand out and also more vibrant to the user. I also used matching colors of the buttons to the colors of the feature goods'.
-![Color Palette](_figures/useOfColor.png)
 
 1. In design question 1, you were likely limited by your knowledge of React in what changes you could make. Now, think bigger. Use a hand-drawn or digital sketch to demonstrate an improved interface. Describe **3 elements and 3 principles**. You can re-use elements or principles from design question 1 as long as they are applied in a new way.
 
 INSERT YOUR RESPONSE AND SKETCH HERE.
-![Sketch](_figures/sketch.png)
 
 ## Done! 🥳
 
