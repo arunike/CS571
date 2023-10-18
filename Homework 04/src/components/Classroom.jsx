@@ -13,7 +13,7 @@ const Classroom = () => {
     useEffect(() => {
         fetch("https://cs571.org/api/f23/hw4/students", {
             headers: {
-                "X-CS571-ID": "bid_36fdfcdcff31ac2e820585fbbbd25efbf1f9f916ea20fb1df4b5825bbf932c04"
+                "X-CS571-ID": CS571.getBadgerId()
             }
         }).then(res => res.json()).then(data => {
             setStudents(data);
