@@ -1,0 +1,70 @@
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+    filter: invert(100%) drop-shadow('#000000');
+}
+
+.display-box {
+    margin: 15px;
+    height: 350px; 
+    width: 290px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: #000000;
+    transition: height 0.3s ease-in-out;
+}
+
+.display-box.expanded {
+    height: 800px;
+}
+
+.display-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.bud-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+
+.detail-padding {
+    padding: 0 10px;
+}
+
+.save-button {
+    background-color: #FFD814 !important;
+    border-color: #FFD814 !important;
+    color: #000000 !important;
+}
+
+.save-button:hover {
+    background-color: #ECC600 !important;
+    border-color: #ECC600 !important;
+}
+
+.adopt-button {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    color: #FFFFFF !important;
+}
+
+.adopt-button:hover {
+    background-color: #167c48 !important;
+    border-color: #167c48 !important;
+}
+
+.saved-buddy h2 {
+    text-align: center;
+}
+
+.display-box h2 {
+    text-align: center;
+}
