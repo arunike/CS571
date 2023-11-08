@@ -8,4 +8,5 @@
     <li> <b>Homework 04: <a href="https://arunike.github.io/#/badger-classroom" target="blank">Badger Classroom</a> </b> </li>
     <li> <b>Homework 05: <a href="https://github.com/arunike/CS571/tree/main/Homework%2005" target="blank">Badger Buddy</a> </b> </li>
     <li> <b>Homework 06: <a href="https://github.com/arunike/CS571/tree/main/Homework%2006 " target="blank">Badger Chatroom</a> </b> </li>
+    <li> <b>Homework 07: <a href="https://github.com/arunike/CS571/tree/main/Homework%2007 " target="blank">Badger Bakery (React Native)</a> </b> </li>
 </p>
