@@ -1,35 +1,24 @@
 import { Text, View, ScrollView } from "react-native";
 import React, { useState, useEffect, useContext } from 'react';
 import BadgerNewsItemCard from '../BadgerNewsItemCard';
-import { PreferencesContext } from '../BadgerNews';
-import CS571 from '@cs571/mobile-client'
+import { BadgerPreferencesContext } from '../BadgerPreferencesContext';
 
 function BadgerNewsScreen(props) {
-    const [articles, setArticles] = useState([]);
-    const { prefs } = useContext(PreferencesContext);
+    const { prefs, articles } = useContext(BadgerPreferencesContext);
+    const [filteredArticles, setFilteredArticles] = useState([]);
 
     useEffect(() => {
-        fetch('https://cs571.org/api/f23/hw8/articles', {
-            method: 'GET',
-            headers: {
-                'X-CS571-ID': CS571.getBadgerId(),
-            },
-        })
-        .then(response => response.json())
-        .then(data => {
-            setArticles(data);
-        })
-    }, []);
-
-    const filteredArticles = articles.filter(article => 
-        article.tags.every(tag => prefs[tag])
-    );
+        const filtered = articles.filter(article => 
+            article.tags.every(tag => prefs[tag] !== false)
+        );
+        setFilteredArticles(filtered);
+    }, [prefs, articles]);
     
     return <ScrollView>
         {filteredArticles.map(article => (
-        <BadgerNewsItemCard key={article.id} article={article} />
+            <BadgerNewsItemCard key={article.id} article={article} />
         ))}
-  </ScrollView>
+    </ScrollView>
 }
 
 export default BadgerNewsScreen;

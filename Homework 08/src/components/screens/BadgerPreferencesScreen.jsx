@@ -1,7 +1,6 @@
 import { Text, View, TouchableOpacity, Animated, StyleSheet } from "react-native";
-import React, { useState, useEffect, useContext} from 'react';
-import { PreferencesContext } from '../BadgerNews';
-import CS571 from '@cs571/mobile-client'
+import React, { useContext} from 'react';
+import { BadgerPreferencesContext } from '../BadgerPreferencesContext';
 
 const CustomSwitch = ({ isOn, onToggle }) => {
     const animatedValue = new Animated.Value(isOn ? 1 : 0);
@@ -31,53 +30,31 @@ const CustomSwitch = ({ isOn, onToggle }) => {
 };
 
 function BadgerPreferencesScreen(props) {
-    const { prefs, setPrefs } = useContext(PreferencesContext);
-    const [tags, setTags] = useState([]);
-
-    useEffect(() => {
-        fetch('https://cs571.org/api/f23/hw8/articles', {
-            method: 'GET',
-            headers: {
-                'X-CS571-ID': CS571.getBadgerId(),
-            },
-        })
-        .then(response => response.json())
-        .then(data => {
-            const uniqueTags = new Set();
-            data.forEach(article => article.tags.forEach(tag => uniqueTags.add(tag)));
-            setTags(Array.from(uniqueTags));
-            
-            const newPrefs = { ...prefs };
-
-            Array.from(uniqueTags).forEach(tag => {
-                if (newPrefs[tag] === undefined) newPrefs[tag] = true;
-            });
-            setPrefs(newPrefs);
-        })
-    }, []);
+    const { prefs, setPrefs, tags } = useContext(BadgerPreferencesContext);
 
     const toggleSwitch = (tag) => {
-        setPrefs({...prefs, [tag]: !prefs[tag]});
+        setPrefs({ ...prefs, [tag]: !prefs[tag] });
     };
 
     return <View style={styles.screenContainer}>
-    {tags.map(tag => (
-        <View key={tag} style={styles.card}>
-            <Text style={styles.tagText}>{tag}</Text>
-            <CustomSwitch
-                isOn={prefs[tag]}
-                onToggle={() => toggleSwitch(tag)}
-            />
-        </View>
-    ))}
-</View>
+        {tags.map(tag => (
+            <View key={tag} style={styles.card}>
+                <Text style={styles.tagText}>{tag}</Text>
+                <CustomSwitch
+                    isOn={prefs[tag]}
+                    onToggle={() => toggleSwitch(tag)}
+                />
+            </View>
+        ))}
+    </View>
 }
 
 const styles = StyleSheet.create({
     screenContainer: {
         flex: 1,
         padding: 10,
-        backgroundColor: '#F5F5F5'
+        backgroundColor: '#F5F5F5',
+        paddingTop: 100,
     },
     card: {
         flexDirection: 'row',

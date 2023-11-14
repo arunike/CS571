@@ -3,7 +3,7 @@ import { View, Text, ScrollView, Animated, StyleSheet, Image, ActivityIndicator,
 import CS571 from '@cs571/mobile-client'
 
 function BadgerArticleScreen(props) {
-    const articleId = props.route.params.articleId;
+    const { articleId, title, imageUri } = props.route.params;
     const [article, setArticle] = useState([]);
     const [loading, setLoading] = useState(true);
     const opacityAnim = useRef(new Animated.Value(0)).current;
@@ -16,47 +16,52 @@ function BadgerArticleScreen(props) {
             },
         })
         .then(response => response.json())
-            .then(data => {
-                setArticle(data);
-                setLoading(false);
-                Animated.timing(opacityAnim, {
-                    toValue: 1,
-                    duration: 2000,
-                    useNativeDriver: true,
-                }).start();
-            })
-            .catch(error => {
-                console.error('Error fetching article:', error);
-                setLoading(false);
-            });
+        .then(data => {
+            setArticle(data);
+            setLoading(false);
+            Animated.timing(opacityAnim, {
+                toValue: 1,
+                duration: 2000,
+                useNativeDriver: true,
+            }).start();
+        })
+        .catch(error => {
+            console.error('Error fetching article:', error);
+            setLoading(false);
+        });
     }, [articleId, opacityAnim]);
 
     if (loading) {
         return (
-            <View style={styles.loadingContainer}>
+            <ScrollView style={styles.container}>
+                <Image 
+                    style={styles.images} 
+                    source={{ uri: imageUri }}
+                />
+                <Text style={styles.title}>{title}</Text>
                 <ActivityIndicator size="large" color="#3498db" />
                 <Text style={styles.loadingText}>The content is loading!</Text>
-            </View>
+            </ScrollView>
         );
     }
 
     const handlePress = () => {
-        Linking.openURL(article.url).catch(err => console.error("Couldn't load page", err));
+        Linking.openURL(article?.url).catch(err => console.error("Couldn't load page", err));
     };
 
     return (
         <ScrollView style={styles.container}>
-            <Animated.View style={{...styles.articleContainer, opacity: opacityAnim}}>
-                <Image 
-                    style={styles.images} 
-                    source={{ uri: `https://raw.githubusercontent.com/CS571-F23/hw8-api-static-content/main/articles/${article.img}` }}
-                />
-                <Text style={styles.title}>{article.title}</Text>
-                <Text style={styles.headerText}>By {article.author} on {article.posted}</Text>
+            <Image 
+                style={styles.images} 
+                source={{ uri: imageUri }}
+            />
+            <Text style={styles.title}>{title}</Text>
+            <Animated.View style={{ opacity: opacityAnim }}>
+                <Text style={styles.headerText}>By {article?.author} on {article?.posted}</Text>
                 <Pressable onPress={handlePress}>
                     <Text style={styles.linkText}>Read full article here.</Text>
                 </Pressable>
-                {article.body.map((paragraph, index) => (
+                {article?.body?.map((paragraph, index) => (
                     <Text key={index} style={styles.paragraph}>{paragraph}</Text>
                 ))}
             </Animated.View>

@@ -1,22 +1,26 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
-import { TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, Image } from 'react-native';
+import { Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 function BadgerNewsItemCard({ article }) {
     const navigation = useNavigation();
 
     return (
-        <TouchableOpacity 
-            style={styles.card}
-            onPress={() => navigation.navigate('Article', { articleId: article.fullArticleId })}
-        >
+        <Pressable 
+        style={styles.card}
+        onPress={() => navigation.navigate('Article', { 
+            articleId: article.fullArticleId,
+            title: article.title,
+            imageUri: `https://raw.githubusercontent.com/CS571-F23/hw8-api-static-content/main/articles/${article.img}`
+        })}
+    >
             <Image 
                 style={styles.image} 
                 source={{ uri: `https://raw.githubusercontent.com/CS571-F23/hw8-api-static-content/main/articles/${article.img}` }} 
             />
             <Text style={styles.title}>{article.title}</Text>
-        </TouchableOpacity>
+        </Pressable>
     );
 }
 

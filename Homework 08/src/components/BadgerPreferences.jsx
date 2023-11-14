@@ -1,14 +1,13 @@
-import { createContext, useState, useContext } from 'react';
+import { useState, useContext } from 'react';
+import { BadgerPreferencesContext } from './BadgerPreferencesContext';
 
-const PreferencesContext = createContext();
-
-export const usePreferences = () => useContext(PreferencesContext);
+export const usePreferences = () => useContext(BadgerPreferencesContext);
 
 export const PreferencesProvider = ({ children }) => {
     const [prefs, setPrefs] = useState({});
     return (
-        <PreferencesContext.Provider value={{ prefs, setPrefs }}>
+        <BadgerPreferencesContext.Provider value={{ prefs, setPrefs }}>
             {children}
-        </PreferencesContext.Provider>
+        </BadgerPreferencesContext.Provider>
     );
 };
