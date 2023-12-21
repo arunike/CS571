@@ -8,9 +8,9 @@
     <li> <b>Homework 04: <a href="https://arunike.github.io/#/badger-classroom" target="blank">Badger Classroom</a> </b> </li>
     <li> <b>Homework 05: <a href="https://github.com/arunike/CS571/tree/main/Homework%2005" target="blank">Badger Buddy</a> </b> </li>
     <li> <b>Homework 06: <a href="https://github.com/arunike/CS571/tree/main/Homework%2006 " target="blank">Badger Chatroom</a> </b> </li>
-    <li> <b>Homework 07: <a href="https://arunike.github.io/static/media/badger%20bakery%20ios%20demo.dba9d2fbcfea4d08a757.mp4" target="blank">Badger Bakery (React Native)</a> </b> </li>
-    <li> <b>Homework 08: <a href="https://arunike.github.io/static/media/badger%20news%20ios%20demo.b01154fff03508e86fc1.mp4" target="blank">Badger News</a> </b> </li>
-    <li> <b>Homework 09: <a href="https://arunike.github.io/static/media/badger%20chat%20ios%20demo.86b19451f55918a05e36.mp4" target="blank">Badger Chat (React Native)</a> </b> </li>
-    <li> <b>Homework 11: <a href="https://arunike.github.io/static/media/badger%20chat%20dialogflow%20demo.f0e89255b2b575de7c32.mp4" target="blank">Badger Chat (DialogFlow)</a> </b> </li>
+    <li> <b>Homework 07: <a href="https://arunike.github.io/assets/badger%20bakery%20ios%20demo-Klqrc0Fi.mp4" target="blank">Badger Bakery (React Native)</a> </b> </li>
+    <li> <b>Homework 08: <a href="https://arunike.github.io/assets/badger%20news%20ios%20demo-hEGF-Z6l.mp4" target="blank">Badger News</a> </b> </li>
+    <li> <b>Homework 09: <a href="https://arunike.github.io/assets/badger%20chat%20ios%20demo-7Shv7Y_a.mp4" target="blank">Badger Chat (React Native)</a> </b> </li>
+    <li> <b>Homework 11: <a href="https://arunike.github.io/assets/badger%20chat%20dialogflow%20demo-52OxkV_t.mp4" target="blank">Badger Chat (DialogFlow)</a> </b> </li>
     <li> <b>Homework 12: <a href="https://github.com/arunike/CS571/tree/main/Homework%2012 " target="blank">BadgerChat Mini</a> </b> </li>
 </p>
